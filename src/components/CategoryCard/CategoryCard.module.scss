@@ -1,0 +1,11 @@
+.randomCategories {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+.categoryCard {
+    
+    img {
+        display: block;
+        width: 200px;
+    }
+}
