@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom";
 import style from "./ProductCard.module.scss";
+import { NavLink } from "react-router-dom";
 import { useGet } from "../../hooks/useGet";
 
 export function ProductCard() {

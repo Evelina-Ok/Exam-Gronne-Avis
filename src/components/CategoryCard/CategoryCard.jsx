@@ -1,4 +1,5 @@
 import { useGet } from "../../hooks/useGet"; 
+import { NavLink } from "react-router-dom";
 import style from "./CategoryCard.module.scss"
 
 export function CategoryCard() {
@@ -14,12 +15,16 @@ export function CategoryCard() {
           .slice(0, 6)
           .map((item) => {
             return (
+              <NavLink
+            key={item.id}
+            to={`/categories/${item.slug}`}>
               <div 
               className={style.categoryCard}
               key={item.id}>
               <h3>{item.name}</h3>
               <img src={item.category_image} />
               </div>
+              </NavLink>
             );
           })}
       </section>

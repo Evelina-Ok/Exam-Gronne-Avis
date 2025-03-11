@@ -15,8 +15,8 @@ function App() {
         <Routes>
           <Route path={'/'} element={<MainLayout />}>
             <Route index={true} element={<FrontPage />} />
-            <Route path="/categories" element={<CategoryPage />} />
-            <Route path="/product/:id" element={<ProductPage />} /> {/* query parameter ":id" */}
+            <Route path="/categories/:slug" element={<CategoryPage />} />
+            <Route path="/product/:slug" element={<ProductPage />} /> {/* query parameter ":id" */}
             <Route path="/login" element={<LoginPage />} />
             <Route path="/*" element={<NotFoundPage />} />
           </Route>
