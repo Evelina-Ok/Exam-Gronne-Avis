@@ -8,6 +8,7 @@ import { LoginPage } from './pages/LoginPage'
 import { NotFoundPage } from './pages/NotFoundPage'
 import { UserContextProvider } from './context/userContext'
 import { NewListingPage } from './pages/NewListingPage'
+import { DashboardPage } from './pages/DashboardPage'
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
             <Route path="/categories/:slug" element={<CategoryPage />} />
             <Route path="/product/:slug" element={<ProductPage />} /> {/* query parameter ":id" */}
             <Route path="/opret-annonce" element={<NewListingPage />} />
-
+            <Route path="/dashboard" element={<DashboardPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/*" element={<NotFoundPage />} />
           </Route>

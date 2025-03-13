@@ -14,7 +14,7 @@ export function Header() {
         <h1>Den Grønne <span>Avis</span></h1>
       </span>
       <Dropdown />
-      {/* <Button color="blue" size="medium"/> */}
+      <Button color="blue" size="medium" title="opret annonce"/>
     </header>
   );
 }

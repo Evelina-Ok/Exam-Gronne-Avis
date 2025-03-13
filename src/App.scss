@@ -1,7 +1,9 @@
 @use './styles/placeholders' as *;
+@use './styles/variables' as *;
 
 body {
     @extend %roboto;
     margin: 0;
     padding: 0;
+    background-color: $lightgrey;
 }

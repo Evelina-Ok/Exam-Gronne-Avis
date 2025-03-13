@@ -1,0 +1,19 @@
+@use '../../styles/variables' as *;
+@use '../../styles/placeholders' as *;
+@use '../../styles/mixins' as *;
+
+.togglebuttons {
+    @include Grid(2, 1, 0);
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+
+    border: 2px solid $cobaltgreen;
+    margin-top: 2rem;
+
+    
+    button {
+        width: 100%;
+        border: none;
+        @extend %roboto;
+    }
+}

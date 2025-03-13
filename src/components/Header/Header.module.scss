@@ -1,6 +1,10 @@
 @use '../../styles/variables' as *;
 @use '../../styles/placeholders' as *;
 
+header {
+    background-color: $white;
+}
+
 .logo {
     
     cursor: pointer;
@@ -8,6 +12,7 @@ h1 {
     background-color: $cobaltgreen;
     color: $white;
     border: 2px solid $cobaltgreen;
+    width: fit-content;
 }
 span {
     background-color: $white;
