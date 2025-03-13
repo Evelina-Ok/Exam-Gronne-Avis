@@ -1,0 +1,16 @@
+@use '../../styles/variables' as *;
+@use '../../styles/placeholders' as *;
+
+.logo {
+    
+    cursor: pointer;
+h1 {
+    background-color: $cobaltgreen;
+    color: $white;
+    border: 2px solid $cobaltgreen;
+}
+span {
+    background-color: $white;
+    color: $cobaltgreen;
+}
+}

@@ -1,0 +1,13 @@
+@use '../../styles/variables' as *;
+
+.dropdown {
+    select {
+    background-color: $lightgrey;
+    border: 2px solid $cobaltgreen;
+    padding: 0.5rem 2rem 0.5rem 0.2rem;
+
+    option:hover {
+        background-color: $cobaltgreen;
+    }
+}
+}

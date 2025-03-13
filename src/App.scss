@@ -1,0 +1,7 @@
+@use './styles/placeholders' as *;
+
+body {
+    @extend %roboto;
+    margin: 0;
+    padding: 0;
+}

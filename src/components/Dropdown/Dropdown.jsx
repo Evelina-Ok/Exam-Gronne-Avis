@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useGet } from "../../hooks/useGet";
+import style from "./Dropdown.module.scss"
 
 export function Dropdown() {
   const { data, isLoading, error } = useGet(
@@ -9,7 +10,7 @@ export function Dropdown() {
   let navigate = useNavigate();
 
   return (
-    <div>
+    <div className={style.dropdown}>
       <select
         onChange={(event) => {
           navigate(`/categories/${event.target.value}`);

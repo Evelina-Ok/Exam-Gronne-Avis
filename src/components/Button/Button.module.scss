@@ -1,0 +1,27 @@
+@use '../../styles/variables' as *;
+
+.button {
+    cursor: pointer;
+    color: $white;
+    border: none;
+}
+
+    .blue {
+        background-color: $phthalogreen;
+    }
+
+    .green {
+        background-color: $cobaltgreen;
+    }
+
+    .danger {
+        background-color: $red;
+    }
+
+    .small {
+        padding: 1rem 2rem;
+    }
+
+    .medium {
+        padding: 2rem 4rem;
+    }

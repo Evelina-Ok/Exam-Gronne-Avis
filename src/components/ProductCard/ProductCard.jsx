@@ -8,7 +8,7 @@ export function ProductCard() {
 
   return (
     <>
-    <section>
+    <section className={style.productContainer}>
       {data?.data
         .sort(() => Math.random() - 0.5)
         .slice(0, 6)
