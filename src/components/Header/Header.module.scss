@@ -2,32 +2,46 @@
 @use '../../styles/placeholders' as *;
 
 header {
-    background-color: $white;
-    display: flex;
-    justify-content: space-between;
+  background-color: $white;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 2vw 6vw;
-    
 }
 
 .logo {
-    cursor: pointer;
+  cursor: pointer;
 
-h1 {
+  h1 {
     background-color: $cobaltgreen;
     color: $white;
     border: 1px solid $cobaltgreen;
     width: fit-content;
     font-weight: 400;
     padding: 0.1rem;
-
-
-}
-span {
+  }
+  span {
     background-color: $white;
     color: $cobaltgreen;
     padding: 0 0.2rem;
+  }
 
-    
+  
+
+  section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+        gap: 0.5rem;
+    img {
+        display: flex;
+      
+    }
+  }
 }
-}
+
+.choices {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+    }

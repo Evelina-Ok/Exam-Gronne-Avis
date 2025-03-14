@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import { useGet } from "../hooks/useGet";
 import { CategorySidebar } from "../components/CategorySidebar/CategorySidebar";
 import { ProductDescription } from "../components/ProductDescription/ProductDescription";
+import { Wrapper } from "../components/Wrapper/Wrapper";
+import { GridContainer } from "../components/GridContainer/GridContainer";
 
 export function ProductPage() {
 
@@ -13,7 +15,9 @@ export function ProductPage() {
   console.log("product details", data);
 
   return (
-    <div>
+          <Wrapper>
+            <GridContainer column={13} gap={2}>
+    
       <CategorySidebar />
 
       <div>
@@ -29,6 +33,8 @@ export function ProductPage() {
       <section>
 
       </section>
-    </div>
+          </GridContainer>
+      
+      </Wrapper>
   );
 }

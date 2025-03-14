@@ -1,18 +1,24 @@
 import { useState, useContext } from "react";
 import { UserContext } from "../context/userContext.jsx";
 import { InputField } from "../components/InputField/InputField"
+import { Wrapper } from "../components/Wrapper/Wrapper.jsx";
+import { Button } from "../components/Button/Button.jsx";
+import { useNavigate } from "react-router-dom";
 
 export function LoginPage() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [loginMessage, setLoginMessage] = useState();
   const [error, setError] = useState();
-
+ 
   console.log("input values", email, password);
 
   const { setUserData } = useContext(UserContext);
 
-  function submitData() {
+  const navigate = useNavigate();
+
+  function submitData(event) {
+    event.preventDefault();
     const body = new URLSearchParams();
     body.append("username", email);
     body.append("password", password);
@@ -30,9 +36,8 @@ export function LoginPage() {
         console.log("data response", data);
         if (data.data.access_token) {
             setUserData(data);
-            setLoginMessage(
-                `Du er nu logget ind... Velkommen tilbage ${data.data.user.firstname}`
-            );
+            navigate("/dashboard")
+            // setLoginMessage(`Du er nu logget ind... Velkommen tilbage ${data.data.user.firstname}`);
         } else {
             setLoginMessage("Du har indtastet forkert password eller email");
         }
@@ -44,7 +49,10 @@ export function LoginPage() {
 
   return (
     <>
-        <form>
+    <Wrapper>
+      <h2 style={{ fontWeight: "400" }}>Velkommen tilbage</h2>
+        <form
+        onSubmit={submitData}>
           <InputField
             type="email"
             placeholder="Indtast din mail"
@@ -53,6 +61,8 @@ export function LoginPage() {
             labelText="Email"
             name="Email"
             action={setEmail}
+            value={email}
+            // action={(event) => setEmail(event.target.value)}
           />
 
           <InputField
@@ -62,11 +72,22 @@ export function LoginPage() {
             id="passwordField"
             labelText="Password"
             action={setPassword}
+            value={password}
+            // action={(event) => setPassword(event.target.value)}
           />
+
+          <input type="submit" value="login" 
+          style={{backgroundColor: "#1d8439", color:"white", border: "none", padding: "1vw 2vw", fontSize: "1.2vw"}}/>
         </form>
-        {/* button should never be inside the form as it's going to refresh the form. Or use prevent default */}
-        <button onClick={() => submitData()}>Send</button>
+
+
+        {/* <Button 
+        onClick={() => submitData()}
+        color="green" size="medium" title="Login"
+        style={{ display: "flex", textAlign: "right" }}
+        /> */}
         {loginMessage}
+        </Wrapper>
     </>
   );
 }

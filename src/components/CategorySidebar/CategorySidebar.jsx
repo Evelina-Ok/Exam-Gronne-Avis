@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useGet } from "../../hooks/useGet";
+import style from "./CategorySidebar.module.scss"
 
 export const CategorySidebar = () => {
   const {
@@ -10,7 +11,7 @@ export const CategorySidebar = () => {
   console.log("list of categories", categoryData);
 
   return (
-    <div>
+    <div className={style.sidebar}>
       <h2>Alle kategorier</h2>
 
       {categoryData?.data.map((item) => {
@@ -18,10 +19,13 @@ export const CategorySidebar = () => {
             <NavLink 
             key={item.id}
             to={`/categories/${item.slug}`}
+            style={({isActive}) => ({
+              fontWeight: isActive ? "bold" : "normal"
+            })}             
             >
-          <div>
-            <h3>{item.name}</h3>
-          </div>
+            <ul>
+            <li>{item.name}</li>
+            </ul>
           </NavLink>
         );
       })}

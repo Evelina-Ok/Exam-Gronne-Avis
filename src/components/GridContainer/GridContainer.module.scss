@@ -10,6 +10,15 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
+  .column-12 {
+    grid-template-columns: 1fr 2fr;
+
+  }
+  .column-13 {
+    grid-template-columns: 1fr 3fr;
+
+  }
+
   .gap-1 {
     gap: 1vw;
   }

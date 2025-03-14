@@ -1,6 +1,13 @@
 import style from "./InputField.module.scss"
 
-export function InputField({type, placeholder, name, id, labelText, action}) {
+export function InputField({
+    type, 
+    placeholder, 
+    name, 
+    id, 
+    labelText, 
+    action,
+value}) {
 
     const onInputChange = (event) => {
         action(event.target.value);
@@ -15,6 +22,7 @@ export function InputField({type, placeholder, name, id, labelText, action}) {
         id={id}
         type={type}         
         placeholder={placeholder}
+        value={value}
         />
         </>
     )
