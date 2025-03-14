@@ -9,7 +9,7 @@ export function CategoryCard() {
   return (
     <div>
               
-      <section className={style.randomCategories}>
+      <section className={style.categoryContainer}>
         {data?.data
           .sort(() => Math.random() - 0.5)
           .slice(0, 6)
@@ -20,9 +20,9 @@ export function CategoryCard() {
             to={`/categories/${item.slug}`}>
               <div 
               className={style.categoryCard}
-              key={item.id}>
-              <h3>{item.name}</h3>
+              >
               <img src={item.category_image} />
+              <h3>{item.name}</h3>
               </div>
               </NavLink>
             );

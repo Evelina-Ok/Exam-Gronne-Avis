@@ -1,11 +1,55 @@
-@use '../../styles/mixins' as *;
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
 .productContainer {
-        @include Grid(3, 2, 0);
+  // @include Grid(6, 1, 2rem);
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2vw;
 }
 
 .productCard {
-    img {
-        display: block;
-        width: 200px;
-    }
+  position: relative;
+  width: 148px;
+  height: 148px;
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 1rem;
+
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+  }
+
+  h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb($cobaltgreen, 0.7);
+    padding: 1vw;
+    margin: auto;
+    box-sizing: border-box;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: normal;
+    opacity: 0; /* item name is hidden */
+    // transform: translateY(100%); /* initially hidden below the card */
+    // transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+   transition: opacity 0.3s ease-in-out; 
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
+  &:hover h3 {
+    opacity: 1; /* show the item name */
+    // transform: translateY(0); /* slide the item name up */
+  }
+
 }
+

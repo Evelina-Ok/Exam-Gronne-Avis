@@ -1,0 +1,39 @@
+@use '../../styles/variables' as *;
+
+.donationCard {
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    
+    margin: 2rem 0;
+
+    h2, h3, p {
+        text-shadow: 1px 0 10px 5px #000000 ;
+        color: $white;
+        text-align: left;
+        font-weight: 400;
+        padding: 0 0 0 2vw;
+
+    }
+    h1 {
+        color: $phthalogreen;
+        text-align: end;
+        padding: 0 5vw 0 0;
+        margin: 0;
+        font-size: 2.5vw;
+    }
+    h2 {
+        font-size: 1.5vw;
+    } 
+    h3 {
+        font-size: 1.2vw;
+
+    }
+    p {
+        padding: 0 0 0 2vw;
+        font-size: 1vw;
+
+    }
+}

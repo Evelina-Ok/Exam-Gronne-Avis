@@ -20,7 +20,7 @@ export function ProductCard() {
               <div
               className={style.productCard}
                >
-                <img src={item.image} />
+                <img src={item.image}  alt={item.name} />
                 <h3>{item.name}</h3>
               </div>
             </NavLink>

@@ -1,0 +1,31 @@
+@use '../../styles/variables' as *;
+
+.missionBanner {
+    
+    background-image: url('src/assets/images/banner_image1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center 80%;
+    text-align: center;
+    color: $white;
+    padding: 2rem 0;
+    margin: 2rem 0;
+    position: relative;
+
+    h1, h2 {
+        text-shadow: 2px 2px 2px #000000a0 ;
+        font-weight: 400;
+        padding: 0 20vw;   
+    }
+    h1 {
+        font-size: 2.5vw;
+
+    }
+    h2 {
+        font-size: 1.4vw;
+    } 
+
+
+}
+
