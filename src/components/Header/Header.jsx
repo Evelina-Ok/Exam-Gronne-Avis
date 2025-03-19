@@ -9,12 +9,12 @@ export function Header() {
   const navigate = useNavigate();
   const { userData } = useContext(UserContext); 
 
-  const handleCreateListing = () => {
-    if (!userData) {
-      navigate('/login'); 
-    } else {
-      navigate('/opret-annonce');
-    }
+   const handleCreateListing = () => {
+     if (!userData) {
+       navigate('/login'); 
+     } else {
+       navigate('/opret-annonce');
+     }
   }
 
   return (

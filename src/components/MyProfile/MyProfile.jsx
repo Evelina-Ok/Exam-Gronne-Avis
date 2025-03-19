@@ -48,6 +48,27 @@ export const MyProfile = () => {
         }
       })
       .catch((err) => setError(err));
+
+
+      function deleteUser() {
+        const options = {
+          method: "DELETE",
+          headers: { Authorization: `Bearer ${userData?.data.access_token}` },
+        };
+      
+        fetch("http://localhost:4242/users", options)
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.success) {
+              setUserData(null); // Clears user data
+              alert("Din profil er blevet slettet");
+            } else {
+              alert("Fejl ved sletning af profil");
+            }
+          })
+          .catch((err) => setError(err));
+      }
+
   }
 
   return (
