@@ -16,9 +16,12 @@ export const NewListingPage = () => {
 
 
  /*  const [enteredValues, setEnteredValues] = useState({
-    title: '',
+    name: '',
     description: '',
-    price: ''
+    price: '',
+    category:'',
+    url:'';,
+    
   }); */
 
   const { userData } = useContext(UserContext);
@@ -118,3 +121,4 @@ export const NewListingPage = () => {
     </form>
   );
 };
+ 
